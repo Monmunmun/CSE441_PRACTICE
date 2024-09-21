@@ -18,19 +18,17 @@ Button btncong;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // Ánh xạ Id cho các biến giao diện
         edtA = findViewById(R.id.edtA);
         edtB = findViewById(R.id.edtB);
         edtKQ = findViewById(R.id.edtKQ);
         btncong = findViewById(R.id.btntong);
-        // Xử lý tương tác với người dùng
         btncong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int a = Integer.parseInt(edtA.getText().toString()); //
                 int b = Integer.parseInt(edtB.getText().toString());
                 int c = a + b;
-                edtKQ.setText(c+""); // Hiển thị kết quả
+                edtKQ.setText(c+"");
             }
         });
     }

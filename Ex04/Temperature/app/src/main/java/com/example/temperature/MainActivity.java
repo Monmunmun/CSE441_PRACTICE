@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 EditText edtdoC,edtdoF;
-Button btncf,btnfc;
+Button btncf,btnfc,btlcl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +23,7 @@ Button btncf,btnfc;
         edtdoF = findViewById(R.id.edtdoF);
         btncf = findViewById(R.id.btncf);
         btnfc = findViewById(R.id.btnfc);
+        btlcl = findViewById(R.id.btlcl);
         btncf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +43,13 @@ Button btncf,btnfc;
                 String doF = edtdoF.getText() + "";
                 int F = Integer.parseInt(doF);
                 edtdoC.setText("" + dcf.format((F - 32) / 1.8));
+            }
+        });
+        btlcl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edtdoC.setText(""); // Xóa nội dung của edtdoC
+                edtdoF.setText(""); // Xóa nội dung của edtdoF
             }
         });
     }

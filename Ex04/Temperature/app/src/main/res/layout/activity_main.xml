@@ -84,7 +84,7 @@
         app:layout_constraintVertical_bias="0.377" />
 
     <Button
-        android:id="@+id/btl_clear"
+        android:id="@+id/btlcl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Clear"

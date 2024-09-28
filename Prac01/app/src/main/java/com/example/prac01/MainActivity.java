@@ -23,26 +23,25 @@ public class MainActivity extends AppCompatActivity {
         Button buttonStart = findViewById(R.id.button_start_activity);
         textViewResult = findViewById(R.id.textView_result);
 
-        // Đăng ký ActivityResultLauncher để thay thế cho startActivityForResult
         activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
                     if (result.getResultCode() == RESULT_OK && result.getData() != null) {
-                        // Nhận dữ liệu trả về từ SecondActivity
+
                         Intent data = result.getData();
                         String fullName = data.getStringExtra("fullName");
                         float gpa = data.getFloatExtra("gpa", 0);
 
-                        // Hiển thị kết quả trên TextView
+
                         textViewResult.setText("Họ và tên: " + fullName + "\nĐiểm GPA: " + gpa);
                     }
                 }
         );
 
-        // Gán sự kiện cho button để khởi chạy SecondActivity
+
         buttonStart.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-            activityResultLauncher.launch(intent); // Thay thế startActivityForResult
+            activityResultLauncher.launch(intent); //
         });
     }
 }

@@ -27,8 +27,8 @@ public class SecondActivity extends AppCompatActivity {
             Intent resultIntent = new Intent();
             resultIntent.putExtra("fullName", fullName);
             resultIntent.putExtra("gpa", gpa);
-            setResult(RESULT_OK, resultIntent); // Gửi dữ liệu về MainActivity
-            finish(); // Đóng activity
+            setResult(RESULT_OK, resultIntent);
+            finish();
         });
     }
 }

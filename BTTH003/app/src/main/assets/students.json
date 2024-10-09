@@ -1,0 +1,105 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "hoTen": "Nguyen Van A",
+      "ngaySinh": "2000-05-14",
+      "email": "nguyenvana@example.com",
+      "diaChi": "123 Le Loi, Ha Noi",
+      "chuyenNganh": "Cong nghe thong tin",
+      "gpa": 3.5,
+      "gioiTinh": "Nam"
+    },
+    {
+      "id": 2,
+      "hoTen": "Le Thi B",
+      "ngaySinh": "1999-07-22",
+      "email": "lethib@example.com",
+      "diaChi": "456 Tran Hung Dao, Da Nang",
+      "chuyenNganh": "Kinh te",
+      "gpa": 3.8,
+      "gioiTinh": "Nu"
+    },
+    {
+      "id": 3,
+      "hoTen": "Tran Van C",
+      "ngaySinh": "2001-01-12",
+      "email": "tranvanc@example.com",
+      "diaChi": "789 Nguyen Trai, Ho Chi Minh",
+      "chuyenNganh": "Ky thuat dien",
+      "gpa": 3.2,
+      "gioiTinh": "Nam"
+    },
+    {
+      "id": 4,
+      "hoTen": "Pham Thi D",
+      "ngaySinh": "1998-11-05",
+      "email": "phamthid@example.com",
+      "diaChi": "321 Le Duan, Hue",
+      "chuyenNganh": "Luật",
+      "gpa": 3.7,
+      "gioiTinh": "Nu"
+    },
+    {
+      "id": 5,
+      "hoTen": "Hoang Van E",
+      "ngaySinh": "2000-08-19",
+      "email": "hoangvane@example.com",
+      "diaChi": "654 Hai Ba Trung, Ha Noi",
+      "chuyenNganh": "Y khoa",
+      "gpa": 3.6,
+      "gioiTinh": "Nam"
+    },
+    {
+      "id": 6,
+      "hoTen": "Vu Thi F",
+      "ngaySinh": "2001-04-10",
+      "email": "vuthif@example.com",
+      "diaChi": "987 Phan Dinh Phung, Da Nang",
+      "chuyenNganh": "Su pham",
+      "gpa": 3.4,
+      "gioiTinh": "Nu"
+    },
+    {
+      "id": 7,
+      "hoTen": "Nguyen Van G",
+      "ngaySinh": "1999-12-30",
+      "email": "nguyenvang@example.com",
+      "diaChi": "159 Le Loi, Ho Chi Minh",
+      "chuyenNganh": "Co khi",
+      "gpa": 3.3,
+      "gioiTinh": "Nam"
+    },
+    {
+      "id": 8,
+      "hoTen": "Tran Thi H",
+      "ngaySinh": "2000-06-07",
+      "email": "tranthih@example.com",
+      "diaChi": "753 Nguyen Hue, Ha Noi",
+      "chuyenNganh": "Kinh doanh quoc te",
+      "gpa": 3.9,
+      "gioiTinh": "Nu"
+    },
+    {
+      "id": 9,
+      "hoTen": "Le Van I",
+      "ngaySinh": "1998-03-25",
+      "email": "levani@example.com",
+      "diaChi": "852 Tran Phu, Da Nang",
+      "chuyenNganh": "Khoa hoc may tinh",
+      "gpa": 3.5,
+      "gioiTinh": "Nam"
+    },
+    {
+      "id": 10,
+      "hoTen": "Pham Thi K",
+      "ngaySinh": "1999-09-15",
+      "email": "phamthik@example.com",
+      "diaChi": "951 Hoang Van Thu, Hue",
+      "chuyenNganh": "Quan tri kinh doanh",
+      "gpa": 3.6,
+      "gioiTinh": "Nu"
+    }
+  ]
+}
+

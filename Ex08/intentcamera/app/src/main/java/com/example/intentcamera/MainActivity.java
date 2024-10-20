@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         myimg = findViewById(R.id.myimg);
-        btncapture = findViewById(R.id. btncapture);
+        btncapture = findViewById(R.id.btncapture);
         btncapture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

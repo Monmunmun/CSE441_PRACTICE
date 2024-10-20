@@ -28,7 +28,7 @@ public class SMSRecevie extends BroadcastReceiver {
                 address = sms.getOriginatingAddress();
                 message +="Có 1 tin nhắn từ "+address+"\n"+body+" vừa gởi đến";
             }
-//Hiển thị
+
             Toast.makeText(context,message,Toast.LENGTH_LONG).show();
         }
     }

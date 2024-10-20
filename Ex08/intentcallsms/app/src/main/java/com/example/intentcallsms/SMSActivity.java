@@ -17,7 +17,7 @@ public class SMSActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.smsactivity);
+        setContentView(R.layout. smsactivity);
         edtsms = (EditText) findViewById(R.id.edtsms);
         btnback2 = (Button) findViewById(R.id.btnback2);
         btnsendsms = (ImageButton) findViewById(R.id.btnsms);

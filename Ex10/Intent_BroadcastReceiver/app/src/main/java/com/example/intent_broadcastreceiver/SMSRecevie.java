@@ -24,11 +24,9 @@ public class SMSRecevie extends BroadcastReceiver {
             {
                 SmsMessage sms = SmsMessage.createFromPdu((byte[])smsEtra[i]);
                 body = sms.getMessageBody();
-
                 address = sms.getOriginatingAddress();
                 message +="Có 1 tin nhắn từ "+address+"\n"+body+" vừa gởi đến";
             }
-
             Toast.makeText(context,message,Toast.LENGTH_LONG).show();
         }
     }

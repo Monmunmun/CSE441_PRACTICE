@@ -36,7 +36,7 @@ public class AdminNotiActivity extends AppCompatActivity {
         notificationAdapter = new AddNotificationAdapter(this, notificationList, new AddNotificationAdapter.OnNotificationClickListener() {
             @Override
             public void onEditClick(Notification notification) {
-                // Xử lý hành động chỉnh sửa thông báo
+
                 Intent intent = new Intent(AdminNotiActivity.this, EditNotiActivity.class);
                 intent.putExtra("NOTI_KEY", notification.getNotiKey());
                 intent.putExtra("NOTIFICATION_NAME", notification.getNotificationName());
@@ -46,7 +46,7 @@ public class AdminNotiActivity extends AppCompatActivity {
 
             @Override
             public void onDeleteClick(Notification notification) {
-                // Xử lý hành động xóa thông báo
+
                 deleteNotification(notification);
             }
         });
@@ -61,7 +61,6 @@ public class AdminNotiActivity extends AppCompatActivity {
         // Lấy dữ liệu từ Firebase
         loadNotifications();
 
-        // Thêm sự kiện cho FloatingActionButton
         FloatingActionButton addNotificationButton = findViewById(R.id.addNotificationButton);
         addNotificationButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +82,13 @@ public class AdminNotiActivity extends AppCompatActivity {
             Intent intent = new Intent(AdminNotiActivity.this, AdminActivity.class);
             startActivity(intent);
         });
+
+        ImageView orderImageView = findViewById(R.id.order);
+        orderImageView.setOnClickListener(v -> {
+            Intent intent = new Intent(AdminNotiActivity.this, AdminOrderActivity.class);
+            startActivity(intent);
+        });
+
     }
 
     private void loadNotifications() {

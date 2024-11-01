@@ -1,61 +1,75 @@
 package com.example.cse_project;
-
 public class Cart {
-    private String title;
-    private String imageUrl;
-    private int price;
-    private int quantity;
-    private long timestamp;
+    private String bookId;
+    private String bookImage;
+    private String bookTitle;
+    private int totalQuantity;
+    private double pricePerItem;
+    private double totalPrice;
 
-    public Cart() {}
+    public Cart() {
 
-    // Constructor
-    public Cart(String title, String imageUrl, int price, int quantity, long timestamp) {
-        this.title = title;
-        this.imageUrl = imageUrl;
-        this.price = price;
-        this.quantity = quantity;
-        this.timestamp = timestamp;
     }
 
-    // Getter và Setter cho từng thuộc tính
-    public String getTitle() {
-        return title;
+
+    public Cart(String bookId, String bookImage, String bookTitle, int totalQuantity, double pricePerItem) {
+        this.bookId = bookId;
+        this.bookImage = bookImage;
+        this.bookTitle = bookTitle;
+        this.totalQuantity = totalQuantity;
+        this.pricePerItem = pricePerItem;
+        this.totalPrice = pricePerItem * totalQuantity;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    // Getters and Setters
+    public String getBookId() {
+        return bookId;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public void setBookId(String bookId) {
+        this.bookId = bookId;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public String getBookImage() {
+        return bookImage;
     }
 
-    public int getPrice() {
-        return price;
+    public void setBookImage(String bookImage) {
+        this.bookImage = bookImage;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public String getBookTitle() {
+        return bookTitle;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public void setBookTitle(String bookTitle) {
+        this.bookTitle = bookTitle;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public int getTotalQuantity() {
+        return totalQuantity;
     }
 
-    public long getTimestamp() {
-        return timestamp;
+    public void setTotalQuantity(int totalQuantity) {
+        this.totalQuantity = totalQuantity;
+        this.totalPrice = pricePerItem * totalQuantity;
     }
 
-    public void setTimestamp(long timestamp) {
-        this.timestamp = timestamp;
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public double getPricePerItem() {
+        return pricePerItem; // Trả về giá mỗi sản phẩm
+    }
+
+    public void setPricePerItem(double pricePerItem) {
+        this.pricePerItem = pricePerItem;
+        this.totalPrice = pricePerItem * totalQuantity;
     }
 }
+

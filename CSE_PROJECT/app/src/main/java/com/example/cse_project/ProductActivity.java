@@ -36,18 +36,14 @@ public class ProductActivity extends AppCompatActivity implements ProductAdapter
         productRecyclerView = findViewById(R.id.productRecyclerView);
         productRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Initialize product list and adapter
         productList = new ArrayList<>();
         productAdapter = new ProductAdapter(this, productList, this);
         productRecyclerView.setAdapter(productAdapter);
 
-        // Reference to Firebase
         databaseReference = FirebaseDatabase.getInstance().getReference("Book");
 
-        // Load products from Firebase
         loadProducts();
 
-        // Setup doanhthu ImageView click listener
         ImageView doanhthu = findViewById(R.id.doanhthu);
         doanhthu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +61,15 @@ public class ProductActivity extends AppCompatActivity implements ProductAdapter
                 Intent intent = new Intent(ProductActivity.this, AdminNotiActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        ImageView donhang = findViewById(R.id.donhang);
+        donhang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProductActivity.this, AdminOrderActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -116,10 +121,10 @@ public class ProductActivity extends AppCompatActivity implements ProductAdapter
     @Override
     public void onDeleteClick(int position) {
         Product product = productList.get(position);
-        String productId = product.getKey(); // Lấy ID sản phẩm để xóa
+        String productId = product.getKey();
 
         if (productId != null) {
-            // Xóa sản phẩm khỏi Firebase
+
             databaseReference.child(productId).removeValue().addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
                     Toast.makeText(ProductActivity.this, "Sản phẩm đã được xóa", Toast.LENGTH_SHORT).show();

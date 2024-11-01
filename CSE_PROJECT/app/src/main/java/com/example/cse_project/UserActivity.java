@@ -54,14 +54,24 @@ public class UserActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+
+        Button changePasswordButton= findViewById(R.id.change_password_button);
+        changePasswordButton.setOnClickListener(v -> {
+            Intent intent = new Intent(UserActivity.this, ChangePassword.class);
+            startActivity(intent);
+        });
+
         ImageView homeIcon = findViewById(R.id.mainactivity);
         homeIcon.setOnClickListener(v -> startActivity(new Intent(UserActivity.this, MainActivity.class)));
 
         ImageView categoryIcon = findViewById(R.id.categoryactivity);
         categoryIcon.setOnClickListener(v -> startActivity(new Intent(UserActivity.this, CategoryActivity.class)));
 
-        ImageView cartIcon = findViewById(R.id.cartactivity); // ID của ImageView giỏ hàng
+        ImageView cartIcon = findViewById(R.id.cartactivity);
         cartIcon.setOnClickListener(v -> startActivity(new Intent(UserActivity.this, CartActivity.class)));
+
+        ImageView helpIcon = findViewById(R.id.hotro);
+        helpIcon.setOnClickListener(v -> startActivity(new Intent(UserActivity.this, HelpActivity.class)));
 
         Button notificationsButton = findViewById(R.id.notifications_button);
         notificationsButton.setOnClickListener(v -> {

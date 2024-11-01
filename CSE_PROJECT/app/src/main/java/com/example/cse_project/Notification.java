@@ -7,9 +7,9 @@ public class Notification {
 
 
     public Notification() {
+
     }
 
-    // Constructor
     public Notification(String notiKey, String notificationName, String noticeDescription) {
         this.notiKey = notiKey;
         this.notificationName = notificationName;
